@@ -3,21 +3,23 @@
       "key": "id",
       "x-originalName": "ID",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Numéro Waldec national unique de l'associatiuon ",
       "label": "ID"
     },
     {
       "key": "ancien_id",
       "x-originalName": "Ancien ID",
-      "type": "integer",
+      "type": "string",
       "description": "Ancien numéro de l'association",
       "label": "Ancien ID"
     },
     {
       "key": "siret",
       "x-originalName": "Numéro SIRET",
-      "type": "integer",
-      "x-refersTo": "http://www.datatourisme.fr/ontology/core/1.0/#siret",
+      "type": "string",
       "description": "Numéro SIRET de l'association",
       "label": "Numéro SIRET"
     },
@@ -25,6 +27,9 @@
       "key": "rup",
       "x-originalName": "Numéro RUP",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Numéro RUP de l'association",
       "label": "Numéro RUP"
     },
@@ -32,6 +37,9 @@
       "key": "gestion",
       "x-originalName": "Gestion",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Code du site gestionnaire de l'association",
       "label": "Gestion"
     },
@@ -67,6 +75,9 @@
       "key": "nature",
       "x-originalName": "Nature",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Simplement déclarée 1901 ou autre",
       "label": "Nature"
     },
@@ -74,6 +85,9 @@
       "key": "groupement",
       "x-originalName": "Groupement",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Type de groupement",
       "x-labels": {
         "S": "Simple",
@@ -91,6 +105,12 @@
       "key": "titre",
       "x-originalName": "Titre",
       "type": "string",
+      "x-capabilities": {
+        "index": false,
+        "values": false,
+        "textAgg": false,
+        "insensitive": false
+      },
       "x-display": "textarea",
       "description": "Titre de l'association",
       "label": "Titre"
@@ -99,6 +119,9 @@
       "key": "titre_court",
       "x-originalName": "Titre court",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Titre court de l'association, Utilisé par DJO comme destinataire de la facturation",
       "label": "Titre court"
     },
@@ -106,6 +129,12 @@
       "key": "objet",
       "x-originalName": "Objet",
       "type": "string",
+      "x-capabilities": {
+        "index": false,
+        "values": false,
+        "textAgg": false,
+        "insensitive": false
+      },
       "x-display": "textarea",
       "description": "Objet de l'association, longueur de texte non limitée",
       "label": "Objet"
@@ -113,14 +142,14 @@
     {
       "key": "objet_social_1",
       "x-originalName": "Objet social 1",
-      "type": "string",
+      "type": "integer",
       "description": "Code obligatoire dans la nomenclature nationale",
       "label": "Objet social 1"
     },
     {
       "key": "objet_social_2",
       "x-originalName": "Objet social 2",
-      "type": "string",
+      "type": "integer",
       "description": "2ème code (facultatif) dans la nomenclature nationale",
       "label": "Objet social 2"
     },
@@ -128,7 +157,9 @@
       "key": "adresse_siege",
       "x-originalName": "Adresse du siège",
       "type": "string",
-      "x-refersTo": "http://schema.org/address",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Adresse du siège de l'association ( compatible DJO )",
       "label": "Adresse du siège"
     },
@@ -136,6 +167,9 @@
       "key": "distributeur_siege",
       "x-originalName": "Distributeur siège",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "",
       "label": "Distributeur siège"
     },
@@ -143,7 +177,6 @@
       "key": "code_commune_siege",
       "x-originalName": "Code commune siège",
       "type": "integer",
-      "x-refersTo": "http://rdf.insee.fr/def/geo#codeCommune",
       "description": "Code INSEE de la commune du siège de l'association",
       "label": "Code commune siège"
     },
@@ -158,7 +191,9 @@
       "key": "nom_commune_siege",
       "x-originalName": "Nom commune siège",
       "type": "string",
-      "x-refersTo": "http://schema.org/City",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Nom de la commune du siège de l'association",
       "label": "Nom commune siège"
     },
@@ -173,14 +208,19 @@
       "key": "adresse_gestion",
       "x-originalName": "Adresse de gestion",
       "type": "string",
-      "x-refersTo": "http://schema.org/address",
-      "description": "Adresse de gestion de l’association ( compatibilité format postal )",
+      "x-capabilities": {
+        "textAgg": false
+      },
+      "description": "Adresse de gestion de l'association ( compatibilité format postal )",
       "label": "Adresse de gestion"
     },
     {
       "key": "distributeur_gestion",
       "x-originalName": "Distributeur gestion",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "",
       "label": "distributeur_gestion"
     },
@@ -195,6 +235,9 @@
       "key": "nom_commune_gestion",
       "x-originalName": "Nom commune gestion",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Nom de la commune de l'adresse de gestion",
       "label": "Nom commune gestion"
     },
@@ -202,6 +245,9 @@
       "key": "pays",
       "x-originalName": "Pays",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Pays de l'adresse de gestion",
       "label": "Pays"
     },
@@ -209,6 +255,9 @@
       "key": "code_civilite",
       "x-originalName": "Code civilité dirigeant",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Code de la civilié du dirigeant principal, seul information d'ordre patronymique",
       "label": "Code civilité dirigeant"
     },
@@ -216,21 +265,24 @@
       "key": "site_web",
       "x-originalName": "Site web",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Site web de l'association",
       "label": "Site web"
     },
     {
       "key": "publication_sur_le_web",
       "x-originalName": "Publication sur le web",
-      "type": "boolean",
-      "description": "Indicateur d’autorisation de publication sur le WEB",
+      "type": "string",
+      "description": "Indicateur d'autorisation de publication sur le WEB",
       "x-labels": {
-        "false": "Non",
-        "true": "Oui"
+        "0": "Non",
+        "1": "Oui"
       },
       "enum": [
-        "false",
-        "true"
+        "0",
+        "1"
       ],
       "label": "Publication sur le web"
     },
@@ -238,6 +290,9 @@
       "key": "observation",
       "x-originalName": "Observation",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "",
       "label": "Observation"
     },
@@ -245,6 +300,9 @@
       "key": "position",
       "x-originalName": "Position",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Position d'activité de l'association ( Active, Dissoute ou Supprimée )",
       "x-labels": {
         "A": "Active",
@@ -264,7 +322,9 @@
       "key": "date_de_mise_a_jour",
       "x-originalName": "Date de mise à jour",
       "type": "string",
-      "x-refersTo": "http://rdf.insee.fr/def/geo#codeDepartement",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Date de mise à jour de l'article",
       "label": "Date de mise à jour"
     },
@@ -272,6 +332,9 @@
       "key": "departement",
       "x-originalName": "Département",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Département de l'association",
       "label": "Département"
     },
@@ -279,6 +342,9 @@
       "key": "source",
       "x-originalName": "Source fichier",
       "type": "string",
+      "x-capabilities": {
+        "textAgg": false
+      },
       "description": "Source du fichier ( rna_waldec ou rna_import )",
       "x-labels": {
         "rna_waldec": "RNA Waldec",
