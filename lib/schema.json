@@ -1,0 +1,293 @@
+[
+    {
+      "key": "id",
+      "x-originalName": "ID",
+      "type": "string",
+      "description": "Numéro Waldec national unique de l'associatiuon ",
+      "label": "ID"
+    },
+    {
+      "key": "ancien_id",
+      "x-originalName": "Ancien ID",
+      "type": "integer",
+      "description": "Ancien numéro de l'association",
+      "label": "Ancien ID"
+    },
+    {
+      "key": "siret",
+      "x-originalName": "Numéro SIRET",
+      "type": "integer",
+      "x-refersTo": "http://www.datatourisme.fr/ontology/core/1.0/#siret",
+      "description": "Numéro SIRET de l'association",
+      "label": "Numéro SIRET"
+    },
+    {
+      "key": "rup",
+      "x-originalName": "Numéro RUP",
+      "type": "string",
+      "description": "Numéro RUP de l'association",
+      "label": "Numéro RUP"
+    },
+    {
+      "key": "gestion",
+      "x-originalName": "Gestion",
+      "type": "string",
+      "description": "Code du site gestionnaire de l'association",
+      "label": "Gestion"
+    },
+    {
+      "key": "date_de_creation",
+      "x-originalName": "Date de création",
+      "type": "string",
+      "description": "Date de déclaration de création ( date de dépôt du dossier en Préfecture )",
+      "label": "Date de création"
+    },
+    {
+      "key": "date_de_declaration",
+      "x-originalName": "Date de déclaration",
+      "type": "string",
+      "description": "Date de la dernière déclaration",
+      "label": "Date de déclaration"
+    },
+    {
+      "key": "date_de_publication",
+      "x-originalName": "Date de publication",
+      "type": "string",
+      "description": "Date de publication au Journal Officiel de l'avis de création",
+      "label": "Date de publication"
+    },
+    {
+      "key": "date_de_dissolution",
+      "x-originalName": "Date de dissolution",
+      "type": "string",
+      "description": "Date de déclaration de dissolution de l'association",
+      "label": "Date de dissolution"
+    },
+    {
+      "key": "nature",
+      "x-originalName": "Nature",
+      "type": "string",
+      "description": "Simplement déclarée 1901 ou autre",
+      "label": "Nature"
+    },
+    {
+      "key": "groupement",
+      "x-originalName": "Groupement",
+      "type": "string",
+      "description": "Type de groupement",
+      "x-labels": {
+        "S": "Simple",
+        "F": "Fédération",
+        "U": "Union"
+      },
+      "enum": [
+        "S",
+        "F",
+        "U"
+      ],
+      "label": "Groupement"
+    },
+    {
+      "key": "titre",
+      "x-originalName": "Titre",
+      "type": "string",
+      "x-display": "textarea",
+      "description": "Titre de l'association",
+      "label": "Titre"
+    },
+    {
+      "key": "titre_court",
+      "x-originalName": "Titre court",
+      "type": "string",
+      "description": "Titre court de l'association, Utilisé par DJO comme destinataire de la facturation",
+      "label": "Titre court"
+    },
+    {
+      "key": "objet",
+      "x-originalName": "Objet",
+      "type": "string",
+      "x-display": "textarea",
+      "description": "Objet de l'association, longueur de texte non limitée",
+      "label": "Objet"
+    },
+    {
+      "key": "objet_social_1",
+      "x-originalName": "Objet social 1",
+      "type": "string",
+      "description": "Code obligatoire dans la nomenclature nationale",
+      "label": "Objet social 1"
+    },
+    {
+      "key": "objet_social_2",
+      "x-originalName": "Objet social 2",
+      "type": "string",
+      "description": "2ème code (facultatif) dans la nomenclature nationale",
+      "label": "Objet social 2"
+    },
+    {
+      "key": "adresse_siege",
+      "x-originalName": "Adresse du siège",
+      "type": "string",
+      "x-refersTo": "http://schema.org/address",
+      "description": "Adresse du siège de l'association ( compatible DJO )",
+      "label": "Adresse du siège"
+    },
+    {
+      "key": "distributeur_siege",
+      "x-originalName": "Distributeur siège",
+      "type": "string",
+      "description": "",
+      "label": "Distributeur siège"
+    },
+    {
+      "key": "code_commune_siege",
+      "x-originalName": "Code commune siège",
+      "type": "integer",
+      "x-refersTo": "http://rdf.insee.fr/def/geo#codeCommune",
+      "description": "Code INSEE de la commune du siège de l'association",
+      "label": "Code commune siège"
+    },
+    {
+      "key": "code_postal_siege",
+      "x-originalName": "Code postal siège",
+      "description": "Code postal du siège de l'association",
+      "type": "integer",
+      "label": "Code postal siège"
+    },
+    {
+      "key": "nom_commune_siege",
+      "x-originalName": "Nom commune siège",
+      "type": "string",
+      "x-refersTo": "http://schema.org/City",
+      "description": "Nom de la commune du siège de l'association",
+      "label": "Nom commune siège"
+    },
+    {
+      "key": "declarant",
+      "x-originalName": "Déclarant",
+      "type": "string",
+      "description": "Nom patronymique du déclarant ( présence temporaire )",
+      "label": "Déclarant"
+    },
+    {
+      "key": "adresse_gestion",
+      "x-originalName": "Adresse de gestion",
+      "type": "string",
+      "x-refersTo": "http://schema.org/address",
+      "description": "Adresse de gestion de l’association ( compatibilité format postal )",
+      "label": "Adresse de gestion"
+    },
+    {
+      "key": "distributeur_gestion",
+      "x-originalName": "Distributeur gestion",
+      "type": "string",
+      "description": "",
+      "label": "distributeur_gestion"
+    },
+    {
+      "key": "code_postal_gestion",
+      "x-originalName": "Code postal gestion",
+      "type": "integer",
+      "description": "Code postal de l'adresse de gestion",
+      "label": "Code postal gestion"
+    },
+    {
+      "key": "nom_commune_gestion",
+      "x-originalName": "Nom commune gestion",
+      "type": "string",
+      "description": "Nom de la commune de l'adresse de gestion",
+      "label": "Nom commune gestion"
+    },
+    {
+      "key": "pays",
+      "x-originalName": "Pays",
+      "type": "string",
+      "description": "Pays de l'adresse de gestion",
+      "label": "Pays"
+    },
+    {
+      "key": "code_civilite",
+      "x-originalName": "Code civilité dirigeant",
+      "type": "string",
+      "description": "Code de la civilié du dirigeant principal, seul information d'ordre patronymique",
+      "label": "Code civilité dirigeant"
+    },
+    {
+      "key": "site_web",
+      "x-originalName": "Site web",
+      "type": "string",
+      "description": "Site web de l'association",
+      "label": "Site web"
+    },
+    {
+      "key": "publication_sur_le_web",
+      "x-originalName": "Publication sur le web",
+      "type": "boolean",
+      "description": "Indicateur d’autorisation de publication sur le WEB",
+      "x-labels": {
+        "false": "Non",
+        "true": "Oui"
+      },
+      "enum": [
+        "false",
+        "true"
+      ],
+      "label": "Publication sur le web"
+    },
+    {
+      "key": "observation",
+      "x-originalName": "Observation",
+      "type": "string",
+      "description": "",
+      "label": "Observation"
+    },
+    {
+      "key": "position",
+      "x-originalName": "Position",
+      "type": "string",
+      "description": "Position d'activité de l'association ( Active, Dissoute ou Supprimée )",
+      "x-labels": {
+        "A": "Active",
+        "R": "R",
+        "D": "Dissoute",
+        "S": "Supprimée"
+      },
+      "enum": [
+        "A",
+        "R",
+        "D",
+        "S"
+      ],
+      "label": "position"
+    },
+    {
+      "key": "date_de_mise_a_jour",
+      "x-originalName": "Date de mise à jour",
+      "type": "string",
+      "x-refersTo": "http://rdf.insee.fr/def/geo#codeDepartement",
+      "description": "Date de mise à jour de l'article",
+      "label": "Date de mise à jour"
+    },
+    {
+      "key": "departement",
+      "x-originalName": "Département",
+      "type": "string",
+      "description": "Département de l'association",
+      "label": "Département"
+    },
+    {
+      "key": "source",
+      "x-originalName": "Source fichier",
+      "type": "string",
+      "description": "Source du fichier ( rna_waldec ou rna_import )",
+      "x-labels": {
+        "rna_waldec": "RNA Waldec",
+        "rna_import": "RNA Import"
+      },
+      "enum": [
+        "rna_waldec",
+        "rna_import"
+      ],
+      "label": "Source fichier"
+    }
+  ]

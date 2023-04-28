@@ -1,2 +1,2 @@
-# processing-rna
+# @data-fair/processing-rna
 Load French RNA database into a data-fair dataset
