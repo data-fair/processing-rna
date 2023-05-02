@@ -1,359 +1,349 @@
 [
-    {
-      "key": "id",
-      "x-originalName": "ID",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Numéro Waldec national unique de l'associatiuon ",
-      "label": "ID"
+  {
+    "key": "id",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false,
+      "insensitive": false,
+      "text": false,
+      "textStandard": false,
+      "values": false
     },
-    {
-      "key": "ancien_id",
-      "x-originalName": "Ancien ID",
-      "type": "string",
-      "description": "Ancien numéro de l'association",
-      "label": "Ancien ID"
+    "description": "Numéro Waldec national unique de l'associatiuon ",
+    "title": "ID"
+  },
+  {
+    "key": "ancien_id",
+    "type": "integer",
+    "x-capabilities": {
+      "textStandard": false,
+      "values": false
     },
-    {
-      "key": "siret",
-      "x-originalName": "Numéro SIRET",
-      "type": "string",
-      "description": "Numéro SIRET de l'association",
-      "label": "Numéro SIRET"
+    "description": "Ancien numéro de l'association",
+    "title": "Ancien ID"
+  },
+  {
+    "key": "siret",
+    "type": "integer",
+    "x-capabilities": {
+      "textStandard": false
     },
-    {
-      "key": "rup",
-      "x-originalName": "Numéro RUP",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Numéro RUP de l'association",
-      "label": "Numéro RUP"
+    "description": "Numéro SIRET de l'association",
+    "title": "Numéro SIRET"
+  },
+  {
+    "key": "rup",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false,
+      "text": false,
+      "textStandard": false
     },
-    {
-      "key": "gestion",
-      "x-originalName": "Gestion",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Code du site gestionnaire de l'association",
-      "label": "Gestion"
+    "description": "Numéro RUP de l'association",
+    "title": "Numéro RUP"
+  },
+  {
+    "key": "gestion",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false,
+      "insensitive": false,
+      "text": false,
+      "textStandard": false
     },
-    {
-      "key": "date_de_creation",
-      "x-originalName": "Date de création",
-      "type": "string",
-      "description": "Date de déclaration de création ( date de dépôt du dossier en Préfecture )",
-      "label": "Date de création"
+    "description": "Code du site gestionnaire de l'association",
+    "title": "Gestion"
+  },
+  {
+    "key": "date_de_creation",
+    "type": "string",
+    "description": "Date de déclaration de création ( date de dépôt du dossier en Préfecture )",
+    "title": "Date de création",
+    "format": "date"
+  },
+  {
+    "key": "date_de_declaration",
+    "type": "string",
+    "description": "Date de la dernière déclaration",
+    "title": "Date de déclaration",
+    "format": "date"
+  },
+  {
+    "key": "date_de_publication",
+    "type": "string",
+    "description": "Date de publication au Journal Officiel de l'avis de création",
+    "title": "Date de publication",
+    "format": "date"
+  },
+  {
+    "key": "date_de_dissolution",
+    "type": "string",
+    "description": "Date de déclaration de dissolution de l'association",
+    "title": "Date de dissolution",
+    "format": "date"
+  },
+  {
+    "key": "nature",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false,
+      "insensitive": false,
+      "text": false,
+      "textStandard": false
     },
-    {
-      "key": "date_de_declaration",
-      "x-originalName": "Date de déclaration",
-      "type": "string",
-      "description": "Date de la dernière déclaration",
-      "label": "Date de déclaration"
+    "description": "Simplement déclarée 1901 ou autre",
+    "title": "Nature"
+  },
+  {
+    "key": "groupement",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false,
+      "insensitive": false,
+      "text": false,
+      "textStandard": false
     },
-    {
-      "key": "date_de_publication",
-      "x-originalName": "Date de publication",
-      "type": "string",
-      "description": "Date de publication au Journal Officiel de l'avis de création",
-      "label": "Date de publication"
+    "description": "Type de groupement",
+    "x-labels": {
+      "S": "Simple",
+      "F": "Fédération",
+      "U": "Union"
     },
-    {
-      "key": "date_de_dissolution",
-      "x-originalName": "Date de dissolution",
-      "type": "string",
-      "description": "Date de déclaration de dissolution de l'association",
-      "label": "Date de dissolution"
+    "title": "Groupement"
+  },
+  {
+    "key": "titre",
+    "type": "string",
+    "x-capabilities": {
+      "index": false,
+      "values": false,
+      "insensitive": false
     },
-    {
-      "key": "nature",
-      "x-originalName": "Nature",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Simplement déclarée 1901 ou autre",
-      "label": "Nature"
+    "x-display": "textarea",
+    "description": "Titre de l'association",
+    "title": "Titre"
+  },
+  {
+    "key": "titre_court",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false,
+      "insensitive": false,
+      "values": false,
+      "index": false
     },
-    {
-      "key": "groupement",
-      "x-originalName": "Groupement",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Type de groupement",
-      "x-labels": {
-        "S": "Simple",
-        "F": "Fédération",
-        "U": "Union"
-      },
-      "enum": [
-        "S",
-        "F",
-        "U"
-      ],
-      "label": "Groupement"
+    "description": "Titre court de l'association, Utilisé par DJO comme destinataire de la facturation",
+    "title": "Titre court"
+  },
+  {
+    "key": "objet",
+    "type": "string",
+    "x-capabilities": {
+      "index": false,
+      "values": false,
+      "insensitive": false
     },
-    {
-      "key": "titre",
-      "x-originalName": "Titre",
-      "type": "string",
-      "x-capabilities": {
-        "index": false,
-        "values": false,
-        "textAgg": false,
-        "insensitive": false
-      },
-      "x-display": "textarea",
-      "description": "Titre de l'association",
-      "label": "Titre"
+    "x-display": "textarea",
+    "description": "Objet de l'association, longueur de texte non limitée",
+    "title": "Objet"
+  },
+  {
+    "key": "objet_social_1",
+    "type": "integer",
+    "x-capabilities": {
+      "textStandard": false
     },
-    {
-      "key": "titre_court",
-      "x-originalName": "Titre court",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Titre court de l'association, Utilisé par DJO comme destinataire de la facturation",
-      "label": "Titre court"
+    "description": "Code obligatoire dans la nomenclature nationale",
+    "title": "Objet social 1"
+  },
+  {
+    "key": "objet_social_2",
+    "type": "integer",
+    "x-capabilities": {
+      "textStandard": false
     },
-    {
-      "key": "objet",
-      "x-originalName": "Objet",
-      "type": "string",
-      "x-capabilities": {
-        "index": false,
-        "values": false,
-        "textAgg": false,
-        "insensitive": false
-      },
-      "x-display": "textarea",
-      "description": "Objet de l'association, longueur de texte non limitée",
-      "label": "Objet"
+    "description": "2ème code (facultatif) dans la nomenclature nationale",
+    "title": "Objet social 2"
+  },
+  {
+    "key": "adresse_siege",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false
     },
-    {
-      "key": "objet_social_1",
-      "x-originalName": "Objet social 1",
-      "type": "integer",
-      "description": "Code obligatoire dans la nomenclature nationale",
-      "label": "Objet social 1"
+    "description": "Adresse du siège de l'association ( compatible DJO )",
+    "title": "Adresse siège"
+  },
+  {
+    "key": "distributeur_siege",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false
     },
-    {
-      "key": "objet_social_2",
-      "x-originalName": "Objet social 2",
-      "type": "integer",
-      "description": "2ème code (facultatif) dans la nomenclature nationale",
-      "label": "Objet social 2"
+    "description": "",
+    "title": "Distributeur siège"
+  },
+  {
+    "key": "code_commune_siege",
+    "type": "integer",
+    "description": "Code INSEE de la commune du siège de l'association",
+    "title": "Code commune siège"
+  },
+  {
+    "key": "code_postal_siege",
+    "description": "Code postal du siège de l'association",
+    "type": "integer",
+    "title": "Code postal siège"
+  },
+  {
+    "key": "nom_commune_siege",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false
     },
-    {
-      "key": "adresse_siege",
-      "x-originalName": "Adresse du siège",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Adresse du siège de l'association ( compatible DJO )",
-      "label": "Adresse du siège"
+    "description": "Nom de la commune du siège de l'association",
+    "title": "Nom commune siège"
+  },
+  {
+    "key": "declarant",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false
     },
-    {
-      "key": "distributeur_siege",
-      "x-originalName": "Distributeur siège",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "",
-      "label": "Distributeur siège"
+    "description": "Nom patronymique du déclarant ( présence temporaire )",
+    "title": "Déclarant"
+  },
+  {
+    "key": "adresse_gestion",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false
     },
-    {
-      "key": "code_commune_siege",
-      "x-originalName": "Code commune siège",
-      "type": "integer",
-      "description": "Code INSEE de la commune du siège de l'association",
-      "label": "Code commune siège"
+    "description": "Adresse de gestion de l'association ( compatibilité format postal )",
+    "title": "Adresse gestion"
+  },
+  {
+    "key": "distributeur_gestion",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false
     },
-    {
-      "key": "code_postal_siege",
-      "x-originalName": "Code postal siège",
-      "description": "Code postal du siège de l'association",
-      "type": "integer",
-      "label": "Code postal siège"
+    "description": "",
+    "title": "Distributeur gestion"
+  },
+  {
+    "key": "code_postal_gestion",
+    "type": "integer",
+    "description": "Code postal de l'adresse de gestion",
+    "title": "Code postal gestion"
+  },
+  {
+    "key": "nom_commune_gestion",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false
     },
-    {
-      "key": "nom_commune_siege",
-      "x-originalName": "Nom commune siège",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Nom de la commune du siège de l'association",
-      "label": "Nom commune siège"
+    "description": "Nom de la commune de l'adresse de gestion",
+    "title": "Nom commune gestion"
+  },
+  {
+    "key": "pays",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false
     },
-    {
-      "key": "declarant",
-      "x-originalName": "Déclarant",
-      "type": "string",
-      "description": "Nom patronymique du déclarant ( présence temporaire )",
-      "label": "Déclarant"
+    "description": "Pays de l'adresse de gestion",
+    "title": "Pays"
+  },
+  {
+    "key": "code_civilite",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false,
+      "insensitive": false,
+      "text": false,
+      "textStandard": false
     },
-    {
-      "key": "adresse_gestion",
-      "x-originalName": "Adresse de gestion",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Adresse de gestion de l'association ( compatibilité format postal )",
-      "label": "Adresse de gestion"
+    "description": "Code de la civilié du dirigeant principal, seul information d'ordre patronymique",
+    "title": "Code civilité"
+  },
+  {
+    "key": "site_web",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false,
+      "text": false
     },
-    {
-      "key": "distributeur_gestion",
-      "x-originalName": "Distributeur gestion",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "",
-      "label": "distributeur_gestion"
+    "description": "Site web de l'association",
+    "title": "Site web"
+  },
+  {
+    "key": "publication_sur_le_web",
+    "type": "boolean",
+    "x-capabilities": {
+      "textStandard": false
     },
-    {
-      "key": "code_postal_gestion",
-      "x-originalName": "Code postal gestion",
-      "type": "integer",
-      "description": "Code postal de l'adresse de gestion",
-      "label": "Code postal gestion"
+    "description": "Indicateur d'autorisation de publication sur le WEB",
+    "x-labels": {
+      "0": "Non",
+      "1": "Oui"
     },
-    {
-      "key": "nom_commune_gestion",
-      "x-originalName": "Nom commune gestion",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Nom de la commune de l'adresse de gestion",
-      "label": "Nom commune gestion"
+    "title": "Publication sur le web"
+  },
+  {
+    "key": "observation",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false,
+      "text": false
     },
-    {
-      "key": "pays",
-      "x-originalName": "Pays",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Pays de l'adresse de gestion",
-      "label": "Pays"
+
+    "description": "",
+    "title": "Observation"
+  },
+  {
+    "key": "position",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false,
+      "insensitive": false,
+      "text": false,
+      "textStandard": false
     },
-    {
-      "key": "code_civilite",
-      "x-originalName": "Code civilité dirigeant",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Code de la civilié du dirigeant principal, seul information d'ordre patronymique",
-      "label": "Code civilité dirigeant"
+
+    "description": "Position d'activité de l'association ( Active, Dissoute ou Supprimée )",
+    "x-labels": {
+      "A": "Active",
+      "R": "R",
+      "D": "Dissoute",
+      "S": "Supprimée"
     },
-    {
-      "key": "site_web",
-      "x-originalName": "Site web",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Site web de l'association",
-      "label": "Site web"
+    "title": "Position"
+  },
+  {
+    "key": "date_de_mise_a_jour",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false,
+      "text": false
     },
-    {
-      "key": "publication_sur_le_web",
-      "x-originalName": "Publication sur le web",
-      "type": "string",
-      "description": "Indicateur d'autorisation de publication sur le WEB",
-      "x-labels": {
-        "0": "Non",
-        "1": "Oui"
-      },
-      "enum": [
-        "0",
-        "1"
-      ],
-      "label": "Publication sur le web"
+    "description": "Date de mise à jour de l'article",
+    "title": "Date de mise à jour"
+  },
+  {
+    "key": "source",
+    "type": "string",
+    "x-capabilities": {
+      "textAgg": false,
+      "insensitive": false,
+      "text": false
     },
-    {
-      "key": "observation",
-      "x-originalName": "Observation",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "",
-      "label": "Observation"
+
+    "description": "Source du fichier ( rna_waldec ou rna_import )",
+    "x-labels": {
+      "rna_waldec": "RNA Waldec",
+      "rna_import": "RNA Import"
     },
-    {
-      "key": "position",
-      "x-originalName": "Position",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Position d'activité de l'association ( Active, Dissoute ou Supprimée )",
-      "x-labels": {
-        "A": "Active",
-        "R": "R",
-        "D": "Dissoute",
-        "S": "Supprimée"
-      },
-      "enum": [
-        "A",
-        "R",
-        "D",
-        "S"
-      ],
-      "label": "position"
-    },
-    {
-      "key": "date_de_mise_a_jour",
-      "x-originalName": "Date de mise à jour",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Date de mise à jour de l'article",
-      "label": "Date de mise à jour"
-    },
-    {
-      "key": "departement",
-      "x-originalName": "Département",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Département de l'association",
-      "label": "Département"
-    },
-    {
-      "key": "source",
-      "x-originalName": "Source fichier",
-      "type": "string",
-      "x-capabilities": {
-        "textAgg": false
-      },
-      "description": "Source du fichier ( rna_waldec ou rna_import )",
-      "x-labels": {
-        "rna_waldec": "RNA Waldec",
-        "rna_import": "RNA Import"
-      },
-      "enum": [
-        "rna_waldec",
-        "rna_import"
-      ],
-      "label": "Source fichier"
-    }
-  ]
+    "title": "Fichier source"
+  }
+]

@@ -44,9 +44,10 @@
     }, {
         "title": "Paramètres",
         "properties": {
-            "processFile":{
+            "datasetID":{
                 "type": "string",
-                "title": "Le fichier à traiter"
+                "title": "ID dataset data.gouv.fr",
+                "description": "Identifiant du jeu de données à utiliser sur le portail data.gouv.fr (ex: repertoire-national-des-associations)"
             },
             "filter":{
                 "type": "string",

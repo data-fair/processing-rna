@@ -6,8 +6,7 @@ const path = require('path')
 
 exports.run = async ({ pluginConfig, processingConfig, tmpDir, axios, log, patchConfig }) => {
   await log.step('Configuration')
-  await log.info(`Fichiers à traiter : ${processingConfig.processFile}`)
-  await log.info(`Supprimer les fichiers téléchargés : ${processingConfig.clearFiles}`)
+  await log.info(`Jeu de données à traiter : ${processingConfig.datasetID}`)
   await log.info(`Mise à jour forcée : ${processingConfig.forceUpdate}`)
 
   await download(processingConfig, tmpDir, axios, log)
@@ -15,8 +14,8 @@ exports.run = async ({ pluginConfig, processingConfig, tmpDir, axios, log, patch
   if (processingConfig.datasetMode === 'update' && !processingConfig.forceUpdate) {
     try {
       await log.step('Vérification de l\'en-tête du jeu de données')
-      const schemaActuelDataset = (await axios.get(`api/v1/datasets/${processingConfig.dataset.id}/schema`, { params: { calculated: false } })).data.map((elem) => `"${elem.key}"`).join(';')
-
+      const schemaActualDataset = (await axios.get(`api/v1/datasets/${processingConfig.dataset.id}/schema`, { params: { calculated: false } })).data.map((elem) => `"${elem.key}"`).join(';').replace(/['"]+/g, '')
+      await log.info(`Jeu de données : ${schemaActualDataset}`)
       let files = await fs.readdir(tmpDir)
       files = files.filter(file => file.endsWith('.csv'))
       const file = files[0] && path.join(tmpDir, files[0])
@@ -30,7 +29,7 @@ exports.run = async ({ pluginConfig, processingConfig, tmpDir, axios, log, patch
         })
       })
 
-      if (!head.includes(schemaActuelDataset.slice(0, head.length - 1))) {
+      if (!head.includes(schemaActualDataset.slice(0, head.length - 1))) {
         await log.info('Le jeu de données ne possède pas la même en-tête que le fichier téléchargé. Activez la mise à jour forcée pour mettre à jour')
         throw new Error('En-têtes différentes entre les fichiers')
       } else {
