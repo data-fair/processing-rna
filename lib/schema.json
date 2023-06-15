@@ -187,13 +187,15 @@
     "key": "code_commune_siege",
     "type": "integer",
     "description": "Code INSEE de la commune du siège de l'association",
-    "title": "Code commune siège"
+    "title": "Code commune siège",
+    "ignoreDetection": true
   },
   {
     "key": "code_postal_siege",
     "description": "Code postal du siège de l'association",
     "type": "integer",
-    "title": "Code postal siège"
+    "title": "Code postal siège",
+    "ignoreDetection": true
   },
   {
     "key": "nom_commune_siege",
@@ -235,7 +237,8 @@
     "key": "code_postal_gestion",
     "type": "integer",
     "description": "Code postal de l'adresse de gestion",
-    "title": "Code postal gestion"
+    "title": "Code postal gestion",
+    "ignoreDetection": true
   },
   {
     "key": "nom_commune_gestion",
