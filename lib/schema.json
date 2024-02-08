@@ -166,6 +166,18 @@
     "title": "Objet social 2"
   },
   {
+    "key": "nomenclature",
+    "type": "string",
+    "description": "Nomenclature générale de l'association",
+    "title": "Nomenclature"
+  },
+  {
+    "key": "nomenclature_precise",
+    "type": "string",
+    "description": "Nomenclature précise de l'association",
+    "title": "Nomenclature précise"
+  },
+  {
     "key": "adresse_siege",
     "type": "string",
     "x-capabilities": {
@@ -300,7 +312,6 @@
       "textAgg": false,
       "text": false
     },
-
     "description": "",
     "title": "Observation"
   },
@@ -313,7 +324,6 @@
       "text": false,
       "textStandard": false
     },
-
     "description": "Position d'activité de l'association ( Active, Dissoute ou Supprimée )",
     "x-labels": {
       "A": "Active",
@@ -341,7 +351,6 @@
       "insensitive": false,
       "text": false
     },
-
     "description": "Source du fichier ( rna_waldec ou rna_import )",
     "x-labels": {
       "rna_waldec": "RNA Waldec",
